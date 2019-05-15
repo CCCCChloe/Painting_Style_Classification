@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Painting GO!</title>
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Righteous|Roboto:400,700,900" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">Painting GO!</a>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contact</a>
+                    </li>
+                </ul>
+            </div> 
+        </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid" style="background-image: url(./background.png); background-size: cover;">
+        <div class="container">
+            <h1 class="display-4 ml">Machine Learning Style Classifier</h1>
+            <h1 class="display-4 go">Painting GO!</h1>
+            <p class="lead">Know painting style by simply uploading a picture.</p>
+            
+            <div class="upload">
+                <input type="file" id="file" style="display:none;" />
+                <button class="btn btn-pill btn-light btn-lg mb-7" id="uploadbutton" name="button" value="Upload" onclick="thisFileUpload();">Upload</button>
+                
+            </div>
+
+            <input id="next" type="button" onClick="smoothScroll(document.getElementById('empty'))" hidden="hidden"/>
+            <img class="arrow" id="next." hidden="hidden" src="./next.png" style="width:100px; height:auto; transform: rotate(90deg); opacity: 0.5" onclick="document.getElementById('next').click()">
+        </div>
+    </div>
+    
+    <div id="empty">
+
+    </div>
+
+    <div class="container" id="introduction">
+        <h2 style="margin-bottom:30px;">
+            Style report: <span class="cubism_span">Cubism</span>
+        </h2>
+        <hr style="margin-bottom: 30px;">
+
+        <div class="row">
+            <div class="col">
+                <img src="../Dataset/Cubism/albert-gleizes_la-chasse-1911.jpg" style="width:80%; height:auto;" alt="">
+            </div>
+    
+            <div class="col">
+                <audio id="sound1" src="Alison.mp3" preload="auto"></audio>
+                <img src="./audio_button.png" alt="" style="width:10%; height:auto;" onclick="document.getElementById('sound1').play();">
+    
+                <div class="scroll_box">
+                    <h4>
+                        What is Cubism?
+                    </h4>
+                    <p>
+                        Cubism is an art movement that made its debut in 1907. Pioneered by Pablo Picasso and Georges Braque, the style is characterized by fragmented subject matter deconstructed in such a way that it can be viewed from multiple angles simultaneously.
+                    </p>
+                    <h4>
+                        What Are the Characteristics of Cubism?
+                    </h4>
+                    <p>
+                            Ever since the Renaissance, if not before, artists painted pictures from a single fixed viewpoint, as if they were taking a photograph. The illusion of background depth was created using standard conventions of linear perspective (eg. objects were shown smaller as they receded) and by painting figures and objects with rounded shaded surfaces to convey a 3-D effect. In addition, the scene or object was painted at a particular moment in time.
+                            In contrast, Braque and Picasso thought that the full significance of an object could only be captured by showing it from multiple points of view and at different times. So, they abandoned the idea of a single fixed viewpoint and instead used a multiplicity of viewpoints. The object was then reassembled out of fragments of these different views, rather like a complex jigsaw puzzle. In this way, many different views of an object were simultanously depicted in the same picture. In a sense, it's like taking 5 different photographs (at different times) of the same object, then cutting them up and reassembling them in an overlapping manner on a flat surface.
+                            Such fragmentation and rearrangement of form meant that a painting could now be regarded less as a kind of window on the world and more as a physical object on which a subjective response to the world is created. As far as artistic technique was concerned, Cubism showed how a sense of solidity and pictorial structure could be created without traditional perspective or modelling.
+                            Thus the Cubist style focused on the flat, two-dimensional surface of the picture plane, and rejected the traditional conventions and techniques of linear perspective, chiaroscuro (use of shading to show light and shadow) and the traditional idea of imitating nature. Instead of creating natural-looking 3-D objects, Cubist painters offered a brand new set of images reassembled from 2-D fragments which showed the objects from several sides simultaneously. If Fauvists and Impressionists strove to express their personal sensation of a particular object or scene, Cubists sought to depict the intellectual idea or form of an object, and its relationship to others.
+                            
+                    </p>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll">
+        <!-- <h3 style="margin-bottom:50px;">
+            Scroll down to see more Cubism paintings
+        </h3>
+        <img src="scroll.png" alt="" style="height: 20%; width:auto; opacity: 0.5;"> -->
+        <input id="next_1" type="button" onClick="smoothScroll(document.getElementById('paintings'))" hidden="hidden"/>
+        <img class="arrow" src="./next.png" style="width:100px; height:auto; transform: rotate(90deg); opacity: 0.3;" onclick="document.getElementById('next_1').click()">
+    </div>
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+    </div>
+
+    <!-- Image cubism -->
+    <div class="container" id="paintings">
+        <h2 class="more_paintings">
+            More <span id="more_paintings">Cubism</span> paintings
+        </h2>
+
+        <hr style="margin-bottom:30px;">
+
+    <div class="row">
+        <div class="column">
+            <img id="myImg" src="../Dataset/Cubism/adolf-fleischmann_hommage-delaunay-et-gleizes-1938.jpg" alt="">
+            <img src="../Dataset/Cubism/afro_cronaca-autobiographia-1953.jpg" alt="">
+            <img src="../Dataset/Cubism/albert-gleizes_composition-1928.jpg" alt="">
+            <img src="../Dataset/Cubism/albert-gleizes_femme-au-fauteuil-1923.jpg" alt="">
+            <img src="../Dataset/Cubism/albert-gleizes_football-players-1912.jpg" alt="">
+        </div>
+        <div class="column">
+            <img src="../Dataset/Cubism/albert-gleizes_landscape-with-mill.jpg" alt="">
+            <img src="../Dataset/Cubism/albert-gleizes_paysage-1914.jpg" alt="">
+            <img src="../Dataset/Cubism/albert-gleizes_two-women-seated-by-a-window-1914.jpg" alt="">
+            <img src="../Dataset/Cubism/albert-gleizes_the-swimmers-1912.jpg" alt="">
+            <img src="../Dataset/Cubism/albert-gleizes_the-schoolboy-1924.jpg" alt="">
+        </div>
+        <div class="column">
+            <img src="../Dataset/Cubism/albert-gleizes_tarrytown.jpg" alt="">
+            <img src="../Dataset/Cubism/albert-gleizes_sitting-nude-1909.jpg" alt="">
+            <img src="../Dataset/Cubism/albert-gleizes_serrieres.jpg" alt="">
+            <img src="../Dataset/Cubism/albert-gleizes_portrait-de-jacques-nayral-1911.jpg" alt="">
+            <img src="../Dataset/Cubism/albert-gleizes_on-a-sailboat.jpg" alt="">
+        </div>
+        <div class="column">
+            <img src="../Dataset/Cubism/albert-gleizes_new-york-1915.jpg" alt="">
+            <img src="../Dataset/Cubism/albert-gleizes_mati-re-et-lumi-re-ou-le-christ-au-t-tramorphe-1934.jpg" alt="">
+            <img src="../Dataset/Cubism/albert-gleizes_man-on-a-balcony-portrait-of-dr-th-o-morinaud-1912.jpg" alt="">
+            <img src="../Dataset/Cubism/albert-gleizes_landscape-with-mill.jpg" alt="">
+            <img src="../Dataset/Cubism/albert-gleizes_landscape-with-chimneys-1913.jpg" alt="">
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+    <!-- Upload file -->
+    <script>
+            function thisFileUpload() {
+                document.getElementById("file").click();
+            };
+    </script>
+    <!-- Optional JavaScript -->
+    <script src="script.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

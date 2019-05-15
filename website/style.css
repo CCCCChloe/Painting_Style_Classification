@@ -1,0 +1,261 @@
+.jumbotron {
+    height: 850px;
+    text-align: center;
+}
+
+.btn-pill {
+    border-radius: 20rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1rem 3rem 1rem 3rem;
+    box-shadow: 3px 3px 2px rgb(0, 0, 0);
+    /* background-color: #90EE90; */
+}
+
+.btn-replace {
+  border-radius: 20rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1rem 3rem 1rem 3rem;
+  box-shadow: 3px 3px 2px rgb(0, 0, 0);
+  background-color: black !important;
+}
+
+.jumbotron .display-4 {
+    margin-top: 150px;
+}
+
+.jumbotron .lead {
+    margin-top: 30px;
+}
+
+.upload {
+    margin-top: 0px;
+    font-size: 100px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#introduction {
+    height: 750px;
+    border: 2px solid gray;
+    border-radius: 20px;
+    padding: 40px 30px 40px 30px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 10px #D3D3D3;
+    text-align: center;
+}
+
+.cubism_span {
+  background-color: rgba(144, 196, 255, 0.7);
+  font-size: 3.5rem;
+  margin-left: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.display-4 {
+  color: white;
+  font-family: 'Righteous', cursive;
+
+}
+
+.ml {
+  font-size: 3rem;
+  margin-left: -30%;
+  text-shadow: 3px 3px 2px black;
+}
+
+.go {
+  font-size: 7.5rem !important;
+  margin-top: 30px !important;
+  margin-left: 20%;
+  margin-bottom: 70px;
+  text-shadow: 5px 5px 2px black;
+}
+
+.lead {
+  color: white;
+  text-shadow: 3px 3px 3px black;
+  font-size: 1.5rem;
+  font-family: 'Righteous', cursive;
+  background-color: rgba(144, 196, 255, 0.7);
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.scroll {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(119, 119, 119);
+}
+
+.more_paintings {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 10px;
+  /* font-family: 'Roboto', sans-serif; */
+}
+
+#more_paintings {
+  font-size: 3rem;
+  background-color: rgba(144, 196, 255, 0.7);
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.scroll_box {
+  height: 420px;;
+  width: 100%;
+  border:1px solid #ccc;
+  font:16px/26px Georgia, Garamond, Serif;
+  overflow:auto;
+}
+
+.scroll_box p {
+  text-align: left;
+}
+
+
+
+
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 10px;
+}
+  
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+img {
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 1rem;
+    transition: all .2s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.05);
+    opacity: 0.7;
+}
+
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption { 
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+}
+
+
+/* test */
+.test02 {
+  background-color: #90EE90;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  font-size: 2rem;
+  font-family: 'Righteous', cursive;
+}
+
+.arrow :hover {
+  transform: scale(1.5) !important;
+}
